@@ -18,10 +18,19 @@ describe('Tomtom Places E2E Tests', () => {
             const firstRes = res[0];
             expect(firstRes).toHaveProperty('placeId')
             expect(firstRes).toHaveProperty('streetNumber')
+            expect(firstRes).toHaveProperty('streetName')
+            expect(firstRes).toHaveProperty('municipality')
+            expect(firstRes).toHaveProperty('postalCode')
+            expect(firstRes).toHaveProperty('countrySubdivisionName')
+            expect(firstRes).toHaveProperty('countrySubdivisionCode')
             expect(firstRes).toHaveProperty('countryCode')
             expect(firstRes).toHaveProperty('country')
             expect(firstRes).toHaveProperty('freeformAddress')
-            expect(firstRes).toHaveProperty('municipality')
+        })
+
+        it('will not return non-Australian address', async () => {
+            const res = await getAutoCompleteDetails('Jalan Lok Yew')
+            expect(res).toHaveLength(0)
         })
     })
 
