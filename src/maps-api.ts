@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
-import { Address, TomTomSearch } from './types';
+import { Address, TomTomSearch } from './tomtom-api-type';
 
 export type PlaceAddress = {
     placeId: string

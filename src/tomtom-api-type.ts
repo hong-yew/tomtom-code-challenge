@@ -1,4 +1,4 @@
-export interface TomTomSearch {
+export interface TomTomSearchResult {
     summary: Summary;
     results?: ResultsEntity[] | null;
 }
