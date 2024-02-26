@@ -4,12 +4,12 @@ import { getPlaceAutocomplete } from './maps-api';
 export type AutoCompleteDetails = {
     placeId: string
     streetNumber: string
-		streetName: string
-		municipalitySubdivision: string | null | undefined
-		municipality: string
-		postalCode: string
-		countrySubdivisionName: string
-		countrySubdivisionCode: string
+    streetName: string
+    municipalitySubdivision: string | null | undefined
+    municipality: string
+    postalCode: string
+    countrySubdivisionName: string
+    countrySubdivisionCode: string
     countryCode: string
     country: string
     freeformAddress: string
