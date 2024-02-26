@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
-import { Address, TomTomSearch } from './tomtom-api-type';
+import { Address, TomTomSearchResult } from './tomtom-api-type';
 
 export type PlaceAddress = {
     placeId: string
@@ -8,7 +8,7 @@ export type PlaceAddress = {
 
 // https://developer.tomtom.com/search-api/documentation/search-service/fuzzy-search
 export async function getPlaceAutocomplete(key: string, address: string): Promise<PlaceAddress[]> {
-    const autocomplete: AxiosResponse<TomTomSearch> = await axios.get(`https://api.tomtom.com/search/2/search/${address}.json'`, {
+    const autocomplete: AxiosResponse<TomTomSearchResult> = await axios.get(`https://api.tomtom.com/search/2/search/${address}.json'`, {
         params: {
             key,
             limit: 100,
